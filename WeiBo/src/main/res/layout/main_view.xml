@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:id="@+id/dinglan_shouye">
+      <ImageButton
+          android:layout_width="45dp"
+          android:layout_height="50dp"
+          android:id="@+id/people_image"
+          android:background="@mipmap/people"
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/mingzi_text"
+          android:layout_centerInParent="true"
+          android:text="登录^"
+          android:textSize="20sp"/>
+      <ImageButton
+          android:layout_width="45dp"
+          android:layout_height="50dp"
+          android:id="@+id/leida_image"
+          android:layout_alignParentRight="true"
+          android:background="@mipmap/leida"
+          />
+      </RelativeLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="请输入要搜索的内容"
+        android:background="@drawable/sousuobiankuang"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/zhuyaoneirong_layout"
+        android:orientation="vertical">
+
+        </LinearLayout>
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/shouye"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/xiaofangzi"
+            android:gravity="center_horizontal"
+            android:text="首页"
+            android:checked="false" />
+
+        <RadioButton
+            android:id="@+id/xiaoxi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/xinfeng"
+            android:gravity="center_horizontal"
+            android:text="消息" />
+        <RadioButton
+            android:id="@+id/jiahao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/jiahao"
+            android:gravity="center_horizontal"
+              />
+        <RadioButton
+            android:id="@+id/faxian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/sousuo"
+            android:gravity="center_horizontal"
+            android:text="发现" />
+
+        <RadioButton
+            android:id="@+id/wo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/people"
+            android:gravity="center_horizontal"
+            android:text="我" />
+    </RadioGroup>
+
+</LinearLayout>

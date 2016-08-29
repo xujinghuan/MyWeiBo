@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/touxiang"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="用户名:"
+        android:id="@+id/yonghuming"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/touxiang"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="密    码:"
+        android:id="@+id/mima"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/yonghuming"
+        android:layout_alignLeft="@+id/yonghuming"
+        android:layout_alignStart="@+id/yonghuming" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/yonghuming_Text"
+        android:hint="邮箱/手机号"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_alignBottom="@+id/yonghuming"
+        android:layout_toRightOf="@+id/yonghuming"
+        android:layout_toEndOf="@+id/yonghuming" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/mima_text"
+        android:hint="请输入密码"
+        android:layout_alignBottom="@+id/mima"
+        android:layout_alignLeft="@+id/yonghuming_Text"
+        android:layout_alignStart="@+id/yonghuming_Text"
+        android:layout_alignRight="@+id/yonghuming_Text"
+        android:layout_alignEnd="@+id/yonghuming_Text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="忘记密码？"
+        android:textColor="#0000ff"
+        android:id="@+id/wangjimima_text"
+        android:layout_alignBottom="@+id/mima_text"
+        android:layout_toRightOf="@+id/mima_text"
+        android:layout_toEndOf="@+id/mima_text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登 录"
+        android:id="@+id/login_button"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/mima"
+        android:layout_toLeftOf="@+id/wangjimima_text"
+        android:layout_alignLeft="@+id/mima"
+        android:layout_alignStart="@+id/mima" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="无密码登录"
+        android:textColor="#0000ff"
+        android:id="@+id/wumimadenglu"
+        android:layout_below="@+id/login_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="注册账号"
+        android:textColor="#0000ff"
+        android:id="@+id/zhuce_text"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/wumimadenglu"
+        android:layout_marginBottom="81dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="QQ登录"
+        android:textColor="#0000ff"
+        android:id="@+id/QQdenglu_text"
+        android:layout_toRightOf="@+id/zhuce_text"
+        android:layout_alignBottom="@+id/zhuce_text"
+        android:layout_marginLeft="20dp"/>
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="18dp"
+        android:id="@+id/imageView"
+        android:layout_alignBottom="@+id/zhuce_text"
+        android:layout_toRightOf="@+id/zhuce_text"
+        android:layout_marginLeft="10dp"
+        android:background="#000000"/>
+
+</RelativeLayout>
