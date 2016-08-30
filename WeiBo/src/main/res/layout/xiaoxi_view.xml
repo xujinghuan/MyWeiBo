@@ -44,7 +44,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
+        <RadioGroup
+            android:id="@+id/xiaoxi_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@mipmap/yinxian"
+            android:showDividers="middle"
+            >
+            <RadioButton
+                android:id="@+id/awo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:button="@null"
+                android:text=" @我的"
+                android:textSize="20sp"
+                android:drawableLeft="@mipmap/atubiao"/>
+            <RadioButton
+                android:id="@+id/pinglun"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:button="@null"
+                android:text=" 评论"
+                android:textSize="20sp"
+                android:drawableLeft="@mipmap/pinglun"/>
+            <RadioButton
+                android:id="@+id/zan"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:button="@null"
+                android:text=" 赞"
+                android:textSize="20sp"
+                android:drawableLeft="@mipmap/dianzan"/>
+            </RadioGroup>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

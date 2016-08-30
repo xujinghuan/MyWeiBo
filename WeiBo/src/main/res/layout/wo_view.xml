@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/dinglan_wo">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/tianjiahaoyou"
+            android:text="添加好友"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wo_text"
+            android:layout_centerInParent="true"
+            android:text="我"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:id="@+id/shezhi_text"
+            android:layout_alignParentRight="true"
+            android:text="设置"
+            android:textSize="15dp"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/xiaoxi_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="@mipmap/yinxian"
+                android:showDividers="middle"
+                >
+                <RadioButton
+                    android:id="@+id/awo"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:button="@null"
+                    android:text=" @我的"
+                    android:textSize="20sp"
+                    android:drawableLeft="@mipmap/atubiao"/>
+                <RadioButton
+                    android:id="@+id/pinglun"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:button="@null"
+                    android:text=" 评论"
+                    android:textSize="20sp"
+                    android:drawableLeft="@mipmap/pinglun"/>
+                <RadioButton
+                    android:id="@+id/zan"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:button="@null"
+                    android:text=" 赞"
+                    android:textSize="20sp"
+                    android:drawableLeft="@mipmap/dianzan"/>
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>-->
+</LinearLayout>
+
