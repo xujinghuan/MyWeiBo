@@ -69,7 +69,8 @@
         android:id="@+id/wangjimima_text"
         android:layout_alignBottom="@+id/mima_text"
         android:layout_toRightOf="@+id/mima_text"
-        android:layout_toEndOf="@+id/mima_text" />
+        android:layout_toEndOf="@+id/mima_text"
+        android:background="@drawable/radio_background"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -80,7 +81,8 @@
         android:layout_below="@+id/mima"
         android:layout_toLeftOf="@+id/wangjimima_text"
         android:layout_alignLeft="@+id/mima"
-        android:layout_alignStart="@+id/mima" />
+        android:layout_alignStart="@+id/mima"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -91,7 +93,8 @@
         android:id="@+id/wumimadenglu"
         android:layout_below="@+id/login_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:background="@drawable/radio_background"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -102,7 +105,8 @@
         android:id="@+id/zhuce_text"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/wumimadenglu"
-        android:layout_marginBottom="81dp" />
+        android:layout_marginBottom="81dp"
+        android:background="@drawable/radio_background"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -113,7 +117,8 @@
         android:id="@+id/QQdenglu_text"
         android:layout_toRightOf="@+id/zhuce_text"
         android:layout_alignBottom="@+id/zhuce_text"
-        android:layout_marginLeft="20dp"/>
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/radio_background"/>
     <ImageView
         android:layout_width="1dp"
         android:layout_height="18dp"

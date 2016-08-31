@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
             +"name text,"
             +"password text,"
             +"sex text,"
-            +"touxiang image)";
+            +"touxiang integer)";
     public static final String CREATE_INFORMATION="create table Information("
             +"id integer primary key autoincrement,"
             +"phoneNum text,"

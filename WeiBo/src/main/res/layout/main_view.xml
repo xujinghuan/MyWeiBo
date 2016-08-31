@@ -46,7 +46,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:divider="@mipmap/yinxian"
+        android:showDividers="end">
 
         <RadioButton
             android:id="@+id/shouye"
@@ -57,7 +59,8 @@
             android:drawableTop="@mipmap/xiaofangzi"
             android:gravity="center_horizontal"
             android:text="首页"
-            android:checked="false" />
+            android:checked="false"
+            android:background="@drawable/radio_background"/>
 
         <RadioButton
             android:id="@+id/xiaoxi"
@@ -67,7 +70,8 @@
             android:button="@null"
             android:drawableTop="@mipmap/xinfeng"
             android:gravity="center_horizontal"
-            android:text="消息" />
+            android:text="消息"
+            android:background="@drawable/radio_background"/>
         <RadioButton
             android:id="@+id/jiahao"
             android:layout_width="0dp"
@@ -76,7 +80,7 @@
             android:button="@null"
             android:drawableTop="@mipmap/jiahao"
             android:gravity="center_horizontal"
-              />
+            android:background="@drawable/radio_background"/>
         <RadioButton
             android:id="@+id/faxian"
             android:layout_width="0dp"
@@ -85,7 +89,8 @@
             android:button="@null"
             android:drawableTop="@mipmap/sousuo"
             android:gravity="center_horizontal"
-            android:text="发现" />
+            android:text="发现"
+            android:background="@drawable/radio_background"/>
 
         <RadioButton
             android:id="@+id/wo"
@@ -95,7 +100,8 @@
             android:button="@null"
             android:drawableTop="@mipmap/people"
             android:gravity="center_horizontal"
-            android:text="我" />
+            android:text="我"
+            android:background="@drawable/radio_background"/>
     </RadioGroup>
 
 </LinearLayout>
