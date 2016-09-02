@@ -12,6 +12,10 @@
         </intent-filter>
     </activity>
         <activity android:name=".activity.MainActivity"></activity>
+
+        <activity android:name=".activity.LeiDaActivity"
+                  android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name=".activity.FaBoWenActivity"></activity>
         <activity android:name=".activity.ZhuCeActivity"></activity>
     </application>
 

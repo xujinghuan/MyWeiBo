@@ -34,6 +34,10 @@ public class WeiBoDataBase {
          values.put("sex",yongHu.getSex());
          values.put("touxiang", R.mipmap.ic_launcher);
          db.insert("Yonghu",null,values);
+         ContentValues values1=new ContentValues();
+         values1.put("phoneNum",yongHu.getPhone());
+         values1.put("bPhoneNum",yongHu.getPhone());
+         db.insert(" Guanzhu",null,values1);
      }
     public  void saveBoWen(BoWen boWen){
         ContentValues values=new ContentValues();
@@ -67,21 +71,24 @@ public class WeiBoDataBase {
         }
         return yongHu;
     }
-    public BoWen getBoWen(String yongHuMing){
-        BoWen boWen=new BoWen();
+    public List<BoWen> getBoWen(String yongHuMing){
+        List<BoWen> list=new ArrayList<BoWen>();
+
         Cursor cursor=db.query("Information",null,"phoneNum=?",new String[]{yongHuMing},null,null,null);
         if(cursor.moveToFirst()){
             do{
+                BoWen boWen=new BoWen();
                 boWen.setPhone(cursor.getString(cursor.getColumnIndex("phoneNum")));
                 boWen.setName(cursor.getString(cursor.getColumnIndex("name")));
                 boWen.setText(cursor.getString(cursor.getColumnIndex("information")));
                 boWen.setTime(cursor.getString(cursor.getColumnIndex("inTime")));
+                list.add(boWen);
             }while(cursor.moveToNext());
         }
         if(cursor!=null){
             cursor.close();
         }
-        return boWen;
+        return list;
     }
 
     public List<String> getPhone(){

@@ -10,7 +10,8 @@
           android:layout_width="45dp"
           android:layout_height="50dp"
           android:id="@+id/people_image"
-          android:background="@mipmap/people"
+          android:src="@mipmap/people"
+          android:background="@drawable/radio_background"
           />
       <TextView
           android:layout_width="wrap_content"
@@ -24,7 +25,8 @@
           android:layout_height="50dp"
           android:id="@+id/leida_image"
           android:layout_alignParentRight="true"
-          android:background="@mipmap/leida"
+          android:src="@mipmap/leida"
+          android:background="@drawable/radio_background"
           />
       </RelativeLayout>
     <EditText
@@ -32,6 +34,7 @@
         android:layout_height="40dp"
         android:hint="请输入要搜索的内容"
         android:background="@drawable/sousuobiankuang"
+        android:focusableInTouchMode="false"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +62,6 @@
             android:drawableTop="@mipmap/xiaofangzi"
             android:gravity="center_horizontal"
             android:text="首页"
-            android:checked="false"
             android:background="@drawable/radio_background"/>
 
         <RadioButton
