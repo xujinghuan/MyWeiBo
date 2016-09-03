@@ -42,7 +42,6 @@
         android:layout_weight="1"
         android:id="@+id/zhuyaoneirong_layout"
         android:orientation="vertical">
-
         </LinearLayout>
     <RadioGroup
         android:id="@+id/radioGroup1"

@@ -1,10 +1,12 @@
 package com.example.hasee.myapplication.activity;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RadioGroup;
@@ -21,6 +23,13 @@ public class MainActivity extends FragmentActivity {
     private TextView mingzi_text;
     private ImageButton leida_image;
     private RadioGroup radioGroup;
+
+    private ShouYeFragment shouYeFragment;
+    private FragmentManager manager;
+    private FragmentTransaction transaction;
+
+    private LocalBroadcastManager broadcastManager;
+    private ShouYeFragment.ShouYeBroadCastReceiver shouYeBroadCastReceiver;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,13 +37,21 @@ public class MainActivity extends FragmentActivity {
 
         yonghuming=getIntent().getStringExtra("yonghuming");
 
-        ShouYeFragment shouYeFragment=new ShouYeFragment();
-        FragmentManager manager=getSupportFragmentManager();
-        FragmentTransaction transaction=manager.beginTransaction();
+        shouYeFragment=new ShouYeFragment();
+        manager=getSupportFragmentManager();
+
+        //使用本地广播来修改fragment的控件来刷新微博内容
+        broadcastManager = LocalBroadcastManager.getInstance(this);
+        shouYeBroadCastReceiver=shouYeFragment.new ShouYeBroadCastReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("android.intent.action.ShouYe_BROADCAST");
+        broadcastManager.registerReceiver(shouYeBroadCastReceiver, intentFilter);
+
+
+        transaction=manager.beginTransaction();
         transaction.add(R.id.zhuyaoneirong_layout,shouYeFragment);
         transaction.addToBackStack(null);
         transaction.commit();
-
         init();
 
     }
@@ -63,12 +80,8 @@ public class MainActivity extends FragmentActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 switch (i){
                     case R.id.shouye:
-                        ShouYeFragment shouYeFragment=new ShouYeFragment();
-                        FragmentManager manager=getSupportFragmentManager();
-                        FragmentTransaction transaction=manager.beginTransaction();
-                        transaction.add(R.id.zhuyaoneirong_layout,shouYeFragment);
-                        transaction.addToBackStack(null);
-                        transaction.commit();
+                            Intent intent1=new Intent("android.intent.action.ShouYe_BROADCAST");
+                            broadcastManager.sendBroadcast(intent1);
                         break;
                     case R.id.xiaoxi:
                         break;
@@ -84,5 +97,11 @@ public class MainActivity extends FragmentActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        broadcastManager.unregisterReceiver(shouYeBroadCastReceiver);
     }
 }
