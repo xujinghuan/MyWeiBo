@@ -6,11 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.hasee.myapplication.R;
 import com.example.hasee.myapplication.activity.MainActivity;
@@ -46,11 +46,10 @@ public class ShouYeFragment extends Fragment {
         }
         return list1;
     }
-
-
     public class ShouYeBroadCastReceiver extends BroadcastReceiver{
         @Override
         public void onReceive(Context context, Intent intent) {
+            list.clear();
             list=getBoWen();
             adapter=new BoWenAdapter(getContext(),R.layout.bowen_view,list);
             listView.setAdapter(adapter);

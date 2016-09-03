@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.hasee.myapplication.R;
 import com.example.hasee.myapplication.model.BoWen;
@@ -73,7 +74,6 @@ public class WeiBoDataBase {
     }
     public List<BoWen> getBoWen(String yongHuMing){
         List<BoWen> list=new ArrayList<BoWen>();
-
         Cursor cursor=db.query("Information",null,"phoneNum=?",new String[]{yongHuMing},null,null,null);
         if(cursor.moveToFirst()){
             do{
