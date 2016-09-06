@@ -41,7 +41,7 @@ public class ShouYeFragment extends Fragment {
         List<String> bPhone=weiBoDataBase.getBPhone(MainActivity.getYonghuming());
         for (String bphone: bPhone){
             for(BoWen boWen:weiBoDataBase.getBoWen(bphone)){
-                list1.add(boWen);
+                list1.add(0,boWen);
             }
         }
         return list1;

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/faxian_edit"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入你所查询的微博号"/>
+        <Button
+            android:id="@+id/faxian_button"
+            android:text="查询"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        </LinearLayout>
+    <com.example.hasee.myapplication.view.YongHuButton
+        android:id="@+id/yonghu_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radio_background">
+        </com.example.hasee.myapplication.view.YongHuButton>
+    <ListView
+        android:id="@+id/bowen_list_faxian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </ListView>
+</LinearLayout>

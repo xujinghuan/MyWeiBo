@@ -11,12 +11,14 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name="com.example.hasee.myapplication.activity.MainActivity"></activity>
+        <activity android:name="com.example.hasee.myapplication.activity.MainActivity"
+                  android:windowSoftInputMode="stateHidden|stateAlwaysHidden"></activity>
 
         <activity android:name="com.example.hasee.myapplication.activity.LeiDaActivity"
                   android:theme="@android:style/Theme.Dialog"></activity>
         <activity android:name="com.example.hasee.myapplication.activity.FaBoWenActivity"></activity>
         <activity android:name="com.example.hasee.myapplication.activity.ZhuCeActivity"></activity>
+        <activity android:name="com.example.hasee.myapplication.activity.FaXianActivity"></activity>
     </application>
 
 </manifest>

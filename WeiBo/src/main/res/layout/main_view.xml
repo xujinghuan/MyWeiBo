@@ -19,7 +19,8 @@
           android:id="@+id/mingzi_text"
           android:layout_centerInParent="true"
           android:text="登录^"
-          android:textSize="20sp"/>
+          android:textSize="20sp"
+          android:focusable="true"/>
       <ImageButton
           android:layout_width="45dp"
           android:layout_height="50dp"
@@ -30,19 +31,18 @@
           />
       </RelativeLayout>
     <EditText
+        android:id="@+id/sousuo_edit"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="请输入要搜索的内容"
         android:background="@drawable/sousuobiankuang"
-        android:focusableInTouchMode="false"
         />
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:id="@+id/zhuyaoneirong_layout"
-        android:orientation="vertical">
-        </LinearLayout>
+    ></FrameLayout>
     <RadioGroup
         android:id="@+id/radioGroup1"
         android:layout_width="match_parent"
