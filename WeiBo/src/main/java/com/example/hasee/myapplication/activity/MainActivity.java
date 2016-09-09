@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.hasee.myapplication.R;
 import com.example.hasee.myapplication.fragment.ShouYeFragment;
+import com.example.hasee.myapplication.sqlite.WeiBoDataBase;
 
 public class MainActivity extends FragmentActivity implements RadioGroup.OnCheckedChangeListener {
 
@@ -26,9 +27,11 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
     private RadioGroup radioGroup;
     private EditText sousuo_edit;
 
+
     private ShouYeFragment shouYeFragment;
     private FragmentManager manager;
     private FragmentTransaction transaction;
+    private WeiBoDataBase weiBoDataBase=WeiBoDataBase.getInstance(this);
 
     private LocalBroadcastManager broadcastManager;
     private ShouYeFragment.ShouYeBroadCastReceiver shouYeBroadCastReceiver;
@@ -74,7 +77,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
         });
 
 
-        mingzi_text.setText(yonghuming);
+        mingzi_text.setText(weiBoDataBase.getYongHu(yonghuming).getName());
 
         radioGroup.setOnCheckedChangeListener(this);
     }
@@ -96,6 +99,8 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
                 startActivity(intent2);
                 break;
             case R.id.wo:
+                Intent intent3=new Intent(MainActivity.this,WoActivity.class);
+                startActivity(intent3);
                 break;
         }
     }

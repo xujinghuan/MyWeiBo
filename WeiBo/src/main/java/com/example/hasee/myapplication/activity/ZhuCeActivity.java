@@ -62,6 +62,7 @@ public class ZhuCeActivity extends Activity {
                     if(weiBoDatabase.getPhone().indexOf(zhuce_phone.getText().toString())<0) {
                         if (mima.equals(mima1)) {
                             YongHu yonghu = new YongHu();
+                            yonghu.setName(zhuce_phone.getText().toString());
                             yonghu.setPhone(zhuce_phone.getText().toString());
                             yonghu.setPassword(zhuce_mima.getText().toString());
                             weiBoDatabase.saveYonghu(yonghu);

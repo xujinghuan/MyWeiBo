@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,7 +43,9 @@ public class FaXianActivity extends Activity {
 
         faxian_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                if(weiBoDataBase.getYongHu(editText.getText().toString())!=null){
+                if(weiBoDataBase.getPhone().indexOf(editText.getText().toString())<0){
+                    Toast.makeText(FaXianActivity.this,"找不到此用户",Toast.LENGTH_SHORT).show();
+                }else{
                     yongHuButton.setImage(weiBoDataBase.getYongHu(editText.getText().toString()).getImage());
                     yongHuButton.setMingzitext(weiBoDataBase.getYongHu(editText.getText().toString()).getName());
                     yongHuButton.setYonghumingtext(weiBoDataBase.getYongHu(editText.getText().toString()).getPhone());
@@ -53,12 +53,9 @@ public class FaXianActivity extends Activity {
                     list=getBoWen();
                     adapter=new BoWenAdapter(FaXianActivity.this,R.layout.bowen_view,list);
                     listView.setAdapter(adapter);
-                }else{
-                    Toast.makeText(FaXianActivity.this,"找不到此用户",Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
         yongHuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,6 +67,7 @@ public class FaXianActivity extends Activity {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             weiBoDataBase.saveGuanzhu(yonghuming,editText.getText().toString());
+                            finish();
                         }
                     });
                     dialog.setNegativeButton("取消",new DialogInterface.OnClickListener(){
@@ -83,6 +81,7 @@ public class FaXianActivity extends Activity {
                     dialog.setPositiveButton("确定",new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
                         }
                     });
                     dialog.setCancelable(false);
@@ -91,7 +90,6 @@ public class FaXianActivity extends Activity {
             }
         });
     }
-
     public List<BoWen> getBoWen(){
         List<BoWen> list1=new ArrayList<BoWen>();
             for(BoWen boWen:weiBoDataBase.getBoWen(editText.getText().toString())){

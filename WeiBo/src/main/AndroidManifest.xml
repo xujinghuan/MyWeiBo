@@ -1,6 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hasee.myapplication">
-
     <application android:allowBackup="true" android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher" android:theme="@style/AppTheme">
         <activity
@@ -12,13 +11,16 @@
         </intent-filter>
         </activity>
         <activity android:name="com.example.hasee.myapplication.activity.MainActivity"
-                  android:windowSoftInputMode="stateHidden|stateAlwaysHidden"></activity>
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"></activity>
 
         <activity android:name="com.example.hasee.myapplication.activity.LeiDaActivity"
                   android:theme="@android:style/Theme.Dialog"></activity>
         <activity android:name="com.example.hasee.myapplication.activity.FaBoWenActivity"></activity>
         <activity android:name="com.example.hasee.myapplication.activity.ZhuCeActivity"></activity>
         <activity android:name="com.example.hasee.myapplication.activity.FaXianActivity"></activity>
+        <activity android:name="com.example.hasee.myapplication.activity.WoActivity"></activity>
+        <activity android:name="com.example.hasee.myapplication.activity.SheZhiActivity"></activity>
+        <activity android:name="com.example.hasee.myapplication.activity.XiuGaiTouXiang"></activity>
     </application>
 
 </manifest>

@@ -20,6 +20,7 @@ import com.example.hasee.myapplication.util.BoWenAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Handler;
 
 public class ShouYeFragment extends Fragment {
 
@@ -46,6 +47,7 @@ public class ShouYeFragment extends Fragment {
         }
         return list1;
     }
+
     public class ShouYeBroadCastReceiver extends BroadcastReceiver{
         @Override
         public void onReceive(Context context, Intent intent) {

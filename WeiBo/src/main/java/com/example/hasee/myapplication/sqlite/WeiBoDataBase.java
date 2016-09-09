@@ -4,9 +4,11 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
 import android.util.Log;
 
 import com.example.hasee.myapplication.R;
+import com.example.hasee.myapplication.activity.MainActivity;
 import com.example.hasee.myapplication.model.BoWen;
 import com.example.hasee.myapplication.model.YongHu;
 
@@ -117,5 +119,29 @@ public class WeiBoDataBase {
             cursor.close();
         }
         return list;
+    }
+    public List<String> getfensi(String phone){
+        List<String> list=new ArrayList<String>();
+        Cursor cursor=db.query("Guanzhu",null,"bPhoneNum=?",new String[]{phone},null,null,null);
+        if(cursor.moveToFirst()){
+            do{
+                list.add(cursor.getString(cursor.getColumnIndex("phoneNum")));
+            }while(cursor.moveToNext());
+        }
+        if(cursor!=null) {
+            cursor.close();
+        }
+        return list;
+    }
+
+    public void xiugainicheng(String nicheng){
+        ContentValues values=new ContentValues();
+        values.put("name",nicheng);
+        db.update("Yonghu",values,"phoneNum=?",new String[]{MainActivity.getYonghuming()});
+    }
+    public void xiugaitouxiang(int touxiang){
+        ContentValues values=new ContentValues();
+        values.put("touxiang",touxiang);
+        db.update("Yonghu",values,"phoneNum=?",new String[]{MainActivity.getYonghuming()});
     }
 }
